@@ -27,3 +27,21 @@ echo "Git is not installed please go head and install"
 else 
 echo "Git is installed, no need to perform"
 fi
+
+dnf lidt installed mysql
+
+if [ $? -ne 0]
+then 
+echo "MYSQL not installed. please install"
+exit 1
+    dnf install mysql -y
+    if [ $? -ne 0]
+    then 
+    echo "mysql not installed. please check"
+    exit 1
+    else 
+    echo "installation completed"
+else
+echo "MYSQL installed, no worries"
+fi
+    
