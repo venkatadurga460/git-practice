@@ -38,7 +38,7 @@ dnf list installed mysql
 if [ $1 -ne 0 ]
 then 
     echo "MYSQL not istalled, going to install"
-    dnf install mysql -y
+    dnf remove mysql 
     VALIDATE $? "Installing MYSQL"
 else 
     echo "Git is already installed, nothing to do.."
