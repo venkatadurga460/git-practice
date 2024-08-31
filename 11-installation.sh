@@ -16,6 +16,14 @@ dnf list installed git
 if [ $? -ne 0 ]
 then 
 echo "Git is not installed please go head and install"
+    dnf insatll git -y
+    if [ $? -ne 0]
+    then 
+    echo "installation not success. please check with BU"
+    exit 1
+    else 
+    echo "git installation succee"
+    fi
 else 
 echo "Git is installed, no need to perform"
 fi
