@@ -2,7 +2,7 @@
 
 USERID=$(id -u)
 
-CHECK_ROOT(}{
+CHECK_ROOT(){
     if [ $USERID -ne 0 ]
     then
         echo "Please run this script with root priveleges"
